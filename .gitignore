@@ -1,0 +1,4 @@
+/*** GITIGNORE ***/
+
+/* Ignoring MAC files */
+.DS_Store
