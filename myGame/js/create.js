@@ -1,4 +1,5 @@
 var platforms;
+var dude;
 //var enemies;
 
 function create() {
@@ -35,7 +36,7 @@ function create() {
 
 
 	//  Creating a caracter, will render sencond after the background.
-	var dude = jokerWin.add.sprite(32, jokerWin.world.height - 150, 'dude');
+	dude = jokerWin.add.sprite(32, jokerWin.world.height - 150, 'dude');
 
 //  Enabling physics on the caracter 
 	jokerWin.physics.arcade.enable(dude);
@@ -48,7 +49,6 @@ function create() {
 //  Our two animations, walking left and right.
     dude.animations.add('left', [0, 1, 2, 3], 10, true);
     dude.animations.add('right', [5, 6, 7, 8], 10, true);
-
 
 
 
