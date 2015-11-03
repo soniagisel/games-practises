@@ -45,5 +45,9 @@ function update() {
         score += 10;
         scoreText.text = 'Score: ' + score;
     }
+
+    if (score === 400) {
+        scoreText.text = 'Y O U   W I N ! ! !';
+    }
     
 }
