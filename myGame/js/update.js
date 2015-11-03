@@ -31,9 +31,19 @@ function update() {
 
     //  Allow the player to jump if they are touching the ground.
     if (cursors.up.isDown && dude.body.touching.down) {
-        dude.body.velocity.y = -350;
-    };
-    
-        
+        dude.body.velocity.y = -300;
+    };  
+
+
+    jokerWin.physics.arcade.collide(stars, platforms);
+
+    jokerWin.physics.arcade.overlap(dude, stars, collectStar, null, this );
+
+    function collectStar (dude, star) {
+        star.kill();
+
+        score += 10;
+        scoreText.text = 'Score: ' + score;
+    }
     
 }
