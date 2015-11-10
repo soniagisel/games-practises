@@ -85,3 +85,63 @@ input, select {
 
 
 /*** STYLES ***/
+body {
+	width: 800px;
+    height: 600px;
+    background: url("../img/background.jpg") no-repeat;
+    position: relative;
+}
+
+.balloons1, .balloons2, .wheel, .target, .btn-spin, .btn-spin-down {
+	position: absolute;
+}
+
+.balloons1 {
+	width: 175px;
+    height: 170px;
+    background: url("../img/balloons.png") no-repeat;
+    top: 40px;
+    left: 70px;
+}
+
+.balloons2 {
+	width: 222px;
+    height: 215px;
+    background: url("../img/balloons.png") no-repeat center / cover;
+    top: 240px;
+    left: 90px;
+}
+
+.wheel {
+	width: 430px;
+    height: 430px;
+    background: url("../img/wheel.png") no-repeat;
+    top: 100px;
+    left: 350px;
+}
+
+.target {
+	width: 78px;
+    height: 63px;
+    background: url("../img/target.png") no-repeat;
+    top: 68px;
+    left: 520px;
+
+}
+
+.btn-spin {
+	width: 140px;
+    height: 148px;
+    background: url("../img/btn-spin.png") no-repeat;
+    left: 500px;
+    top: 248px;
+}
+
+.btn-spin-down {
+	width: 140px;
+    height: 148px;
+    background: url("../img/btn-spin-down.png") no-repeat;
+    left: 500px;
+    top: 248px;
+    display: none;
+}
