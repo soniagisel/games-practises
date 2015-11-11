@@ -20,7 +20,18 @@ $(document).ready(function(){
     	scale: 100
     });
 
-    TweenMax.from($('.btn-spin'), 0.2, {
+    TweenMax.from($('.btn-spin'), 1, {
     	delay: 1.5,
+    	top: -600,
+    	ease: Power2.easeOut
+    });
+
+    $('.btn-spin').on('click', function(){
+    	$('.btn-spin-down').css('display', 'block');
+
+    	TweenMax.from($('.wheel'), 15, {
+    		rotation: 360*30,
+    		ease: Power1.easeInOut
+    	});
     });
 });
