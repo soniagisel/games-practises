@@ -50,7 +50,7 @@ $(document).ready(function(){
     	$('.btn-spin-down').css('display', 'block');
 
     	TweenMax.to($('.wheel'), 15, {
-    		rotation: 360*30 - Math.random()*120,
+    		rotation: 360*30 - Math.random()*280,
     		ease: Power1.easeInOut
     	});
     });
