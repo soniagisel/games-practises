@@ -90,6 +90,7 @@ body {
     height: 600px;
     background: url("../img/background.jpg") no-repeat;
     position: relative;
+    overflow: hidden;
 }
 
 .balloons1, .balloons2, .wheel, .target, .btn-spin, .btn-spin-down {

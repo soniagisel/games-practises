@@ -30,7 +30,8 @@ $(document).ready(function(){
 
     TweenMax.from($('.wheel'), 1, {
     	delay: 2,
-    	scale: 0
+    	scale: 0,
+    	rotation: 360*3
     });
 
     TweenMax.from($('.target'), 1, {
@@ -49,7 +50,7 @@ $(document).ready(function(){
     	$('.btn-spin-down').css('display', 'block');
 
     	TweenMax.to($('.wheel'), 15, {
-    		rotation: 360*30 - Math.random()*100,
+    		rotation: 360*30 - Math.random()*120,
     		ease: Power1.easeInOut
     	});
     });
