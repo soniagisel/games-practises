@@ -10,7 +10,10 @@ $(document).ready(function(){
     	scale: 0,
     	rotationX:45, 
     	scaleX:0.8, 
-    	z:-300
+    	z:-300,
+    	yoyo: true,
+    	repeat: -1,
+    	ease: Power2.easeInOut
     });
 
     TweenMax.from($('.btn-spin'), 1, {
@@ -46,7 +49,7 @@ $(document).ready(function(){
     	$('.btn-spin-down').css('display', 'block');
 
     	TweenMax.to($('.wheel'), 15, {
-    		rotation: 360*30 - 120,
+    		rotation: 360*30 - Math.random()*100,
     		ease: Power1.easeInOut
     	});
     });
