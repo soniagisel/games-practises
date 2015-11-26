@@ -17,6 +17,7 @@ function create() {
 
 //  We will enable physics for any object that is created in this group
     platforms.enableBody = true; 
+    
 
 // Here we create the ground.
    var ground = platforms.create(0, jokerWin.world.height - 64, 'ground');
