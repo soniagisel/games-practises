@@ -1,5 +1,5 @@
 function preload () {
-	tennis.load.image('ball', 'img/tennis-ball.png');
-	tennis.load.image('court', 'img/tennis-court.png');
-	tennis.load.image('racquet', 'img/tennis-racquet.png');
+	tennis.load.spritesheet('ball', 'img/tennis-ball.png');
+	tennis.load.spritesheet('court', 'img/tennis-court.png');
+	tennis.load.spritesheet('racquet', 'img/tennis-racquet.png');
 }

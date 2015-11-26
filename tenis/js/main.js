@@ -1,5 +1,5 @@
 var tennis = new Phaser.Game(
-	800, 
+	900, 
 	600, 
 	Phaser.AUTO, 
 	'', {
