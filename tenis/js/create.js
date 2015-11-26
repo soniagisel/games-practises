@@ -8,7 +8,7 @@ function create () {
 	tennis.stage.backgroundColor = "#DD6E2D";
 
 // Court ///////////////////////////////////////
-	court = tennis.add.sprite(180, -15, 'court');
+	court = tennis.add.sprite(80, -15, 'court');
 
 	court.scale.setTo(0.9, 0.9);
 
