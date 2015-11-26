@@ -8,9 +8,9 @@ function create () {
 	tennis.stage.backgroundColor = "#DD6E2D";
 
 // Court ///////////////////////////////////////
-	court = tennis.add.sprite(35, -105, 'court');
+	court = tennis.add.sprite(180, -15, 'court');
 
-	court.scale.setTo(1.3, 1.3);
+	court.scale.setTo(0.9, 0.9);
 
 	tennis.physics.arcade.enable(court);
 
@@ -39,7 +39,7 @@ function create () {
 
 	var racquet_2 = racquets.create(400, 50, 'racquet');
 
-	racquet_1.scale.setTo(0.2, 0.2);
+	racquet_1.scale.setTo(0.1, 0.1);
 
 	racquet_2.scale.setTo(0.1, 0.1);
 

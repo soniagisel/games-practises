@@ -1,9 +1,10 @@
 var tennis = new Phaser.Game(
-	900, 
+	800, 
 	600, 
 	Phaser.AUTO, 
 	'', {
 		preload: preload, 
-		create: create
+		create: create,
+		update: update
 	}
 );
