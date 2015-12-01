@@ -1,5 +1,7 @@
 var court,
 	ball,
+	racquet_1,
+	racquet_2,
 	racquets;
 
 function create () {
@@ -35,9 +37,9 @@ function create () {
 // Racquets ////////////////////////////////////
 	racquets = tennis.add.group();
 
-	var racquet_1 = racquets.create(400, 400, 'racquet');
+	racquet_1 = racquets.create(380, 510, 'racquet');
 
-	var racquet_2 = racquets.create(400, 50, 'racquet');
+	racquet_2 = racquets.create(380, 40, 'racquet');
 
 	racquet_1.scale.setTo(0.1, 0.1);
 
@@ -47,6 +49,9 @@ function create () {
 
 	tennis.physics.arcade.enable(racquet_1);
 	tennis.physics.arcade.enable(racquet_2);
+
+	racquet_1.body.collideWorldBounds = true;
+	racquet_2.body.collideWorldBounds = true;
 	
 
 };
