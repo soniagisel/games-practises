@@ -29,10 +29,12 @@ function create () {
 	ball.enableBody = true;
 
 	tennis.physics.arcade.enable(ball);
-
-	ball.body.bounce.y = 0.7;
+	
 	ball.body.gravity.y = 900;
 	ball.body.collideWorldBounds = true;
+
+	ball.body.velocity.setTo(200, 200);
+	ball.body.bounce.set(1);
 
 // Racquets ////////////////////////////////////
 	racquets = tennis.add.group();

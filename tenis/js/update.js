@@ -24,5 +24,5 @@ function update () {
 	}
 
 
-	//tennis.physics.arcade.collide(racquets, ball);
+	tennis.physics.arcade.collide(ball, racquets);
 };
