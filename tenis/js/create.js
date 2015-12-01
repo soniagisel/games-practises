@@ -29,7 +29,7 @@ function create () {
 	ball.enableBody = true;
 
 	tennis.physics.arcade.enable(ball);
-	
+
 	ball.body.gravity.y = 900;
 	ball.body.collideWorldBounds = true;
 
@@ -54,6 +54,9 @@ function create () {
 
 	racquet_1.body.collideWorldBounds = true;
 	racquet_2.body.collideWorldBounds = true;
+
+	racquet_1.body.immovable = true;
+	racquet_2.body.immovable = true;
 	
 
 };
