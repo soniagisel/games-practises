@@ -1,6 +1,3 @@
-var score_racquet1 = 0,
-	score_racquet2 = 0;
-
 function update () {
 	//Arrow keys
 	cursors = tennis.input.keyboard.createCursorKeys();
@@ -33,11 +30,13 @@ function update () {
 	function scorePlayer1 (ball, racquet_1) {
 		score_racquet1 += 10;
 		capocha_score.text = 'Score: ' + score_racquet1;
+		lastTouch = 'Capocha';
 
 	};
 
 	function scorePlayer2 (ball, racquet_2) {
 		score_racquet2 += 10;
 		dj_score.text = 'Score: ' + score_racquet2;
+		lastTouch = 'DJ';
 	};
 };

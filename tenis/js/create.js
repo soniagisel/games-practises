@@ -4,6 +4,7 @@ var court,
 	racquet_2,
 	score_racquet1 = 0,
 	score_racquet2 = 0,
+	lastTouch,
 	racquets;
 
 function create () {
@@ -42,8 +43,16 @@ function create () {
 
 	ball.checkWorldBounds = true;
 	ball.events.onOutOfBounds.add(function(){
-	    alert('Game over!');
-	    location.reload();
+	    //alert('Game over!');
+	    //location.reload();
+
+	    if (lastTouch = 'Capocha') {
+	    	//alert('DJ Wins!') ;
+	    	finalScore = tennis.add.text(370, 250, 'DJ Wins!!! ', { fontSize: '45px', fill: '#000' });
+	    } else if (lastTouch = 'DJ') {
+	    	finalScore = tennis.add.text(370, 250, 'Capocha Wins!!! ', { fontSize: '45px', fill: '#000' });
+	    };
+
 	}, this);
 
 
@@ -71,7 +80,7 @@ function create () {
 
 
 	//Scores
-	capocha_score = tennis.add.text(16, 540, 'Score: ' + score_racquet1, { fontSize: '32px', fill: '#000' });
-	dj_score = tennis.add.text(16, 16, 'Score: ' + score_racquet2, { fontSize: '32px', fill: '#000' });
+	capocha_score = tennis.add.text(16, 540, 'Capocha: ' + score_racquet1, { fontSize: '32px', fill: '#000' });
+	dj_score = tennis.add.text(16, 16, 'DJ: ' + score_racquet2, { fontSize: '32px', fill: '#000' });
 
 };
