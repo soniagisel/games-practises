@@ -2,12 +2,17 @@ var court,
 	ball,
 	racquet_1,
 	racquet_2,
+	score_racquet1 = 0,
+	score_racquet2 = 0,
 	racquets;
 
 function create () {
 	tennis.physics.startSystem(Phaser.Physics.ARCADE);
 
 	tennis.stage.backgroundColor = "#DD6E2D";
+
+	tennis.physics.arcade.checkCollision.down = false;
+	tennis.physics.arcade.checkCollision.up = false;
 
 // Court ///////////////////////////////////////
 	court = tennis.add.sprite(80, -15, 'court');
@@ -30,22 +35,28 @@ function create () {
 
 	tennis.physics.arcade.enable(ball);
 
-	ball.body.gravity.y = 900;
+	ball.body.velocity.setTo(270, 270);
+	ball.body.bounce.set(1);
+
 	ball.body.collideWorldBounds = true;
 
-	ball.body.velocity.setTo(200, 200);
-	ball.body.bounce.set(1);
+	ball.checkWorldBounds = true;
+	ball.events.onOutOfBounds.add(function(){
+	    alert('Game over!');
+	    location.reload();
+	}, this);
+
 
 // Racquets ////////////////////////////////////
 	racquets = tennis.add.group();
 
-	racquet_1 = racquets.create(380, 510, 'racquet');
+	racquet_1 = racquets.create(360, 480, 'capocha');
 
-	racquet_2 = racquets.create(380, 40, 'racquet');
+	racquet_2 = racquets.create(360, 20, 'dj');
 
-	racquet_1.scale.setTo(0.1, 0.1);
+	racquet_1.scale.setTo(1, 1);
 
-	racquet_2.scale.setTo(0.1, 0.1);
+	racquet_2.scale.setTo(1, 1);
 
 	racquets.enableBody = true;
 
@@ -57,6 +68,10 @@ function create () {
 
 	racquet_1.body.immovable = true;
 	racquet_2.body.immovable = true;
-	
+
+
+	//Scores
+	capocha_score = tennis.add.text(16, 540, 'Score: ' + score_racquet1, { fontSize: '32px', fill: '#000' });
+	dj_score = tennis.add.text(16, 16, 'Score: ' + score_racquet2, { fontSize: '32px', fill: '#000' });
 
 };
