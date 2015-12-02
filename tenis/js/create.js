@@ -10,7 +10,7 @@ function create () {
 	tennis.physics.startSystem(Phaser.Physics.ARCADE);
 
 	tennis.stage.backgroundColor = "#DD6E2D";
-
+//  With this, the ball won't collide with the bottom and the top of the world.
 	tennis.physics.arcade.checkCollision.down = false;
 	tennis.physics.arcade.checkCollision.up = false;
 
